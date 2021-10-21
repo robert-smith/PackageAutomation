@@ -1,0 +1,25 @@
+name: Publish module
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Generate help
+        run: ./build.ps1 -Task 'help'
+        shell: powershell
+        
+      - name: Test
+        run: ./build.ps1 -Task 'test'
+        shell: powershell
+      
+      - name: Publish to PSGallery
+        run: ./build.ps1 -Task 'publish'
+        shell: powershell
