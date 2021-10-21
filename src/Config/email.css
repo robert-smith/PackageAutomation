@@ -1,0 +1,25 @@
+td#Fail {
+    color: #b30000;
+}
+td#Success {
+    color: #009900;
+}
+table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+table td, table th {
+    border: 1px solid #ddd;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+table th {
+    text-align: left;
+    background-color: black;
+    color: white;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}

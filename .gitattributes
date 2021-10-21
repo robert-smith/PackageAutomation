@@ -1,0 +1,7 @@
+*           text=auto
+*.ps1       text eol=lf
+*.psd1      text eol=lf
+*.psm       text eol=lf
+*.md        text eol=lf
+*.yml       text eol=lf
+*.template  text eol=lf
