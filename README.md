@@ -31,13 +31,11 @@ Usage
 
 The `Application` command is the main command in this module. Each time this command is run, it will automatically check for new updates for the specified application, download the latest installer, create a silent package using the supplied install/uninstall commands, create a new application, distribute content, and finally deploy the new application. This command was designed to be run periodically automatically using a runner such as [Jenkins](https://jenkins.io) or the [GitLab runner](https://docs.gitlab.com/runner/).
 
-> [!NOTE]
-> This module makes use of the [PowerShell Application Deployment Toolkit](https://psappdeploytoolkit.com/). See the **PS ADT Cmdlets** folder page for more information on how it is incorporated and how to use its features when creating Application scripts.
+**NOTE**: This module makes use of the [PowerShell Application Deployment Toolkit](https://psappdeploytoolkit.com/). See the **PS ADT Cmdlets** folder page for more information on how it is incorporated and how to use its features when creating Application scripts.
 
 ### Syntax
 
-> [!NOTE]
-> Do no include the angle brackets (`<>`).
+**NOTE**: Do no include the angle brackets (`<>`).
 
 ```powershell
 Application <Name of application> {
@@ -193,8 +191,7 @@ This will pop up a dialog if `code.exe` is running. The dialog will not be dismi
 - **Type**: Boolean
 - **Description**: If **true**, will have SCCM uninstall the previous version before installing the new one.
 
-> [!WARNING]
-> Setting `Uninstall` to **true** can have major consequences if being deployed as available. Do **not** use this setting unless you are sure.
+**WARNING**: Setting `Uninstall` to **true** can have major consequences if being deployed as available. Do **not** use this setting unless you are sure.
 
 ##### Dependencies
 
@@ -352,8 +349,7 @@ Example usage:
 
 This will deploy an application as **required** to a collection with the same name as the application. It will also deploy as available to a collection called **All Contoso Clients**.
 
-> [!NOTE]
-> Certain parameters are required depending on the `DeployPurpose` mode. In the example below, `OverrideServiceWindow` and `RebootOutsideServiceWindow` must be set for **Required** deployments but not for **Available**.
+**NOTE**: Certain parameters are required depending on the `DeployPurpose` mode. In the example below, `OverrideServiceWindow` and `RebootOutsideServiceWindow` must be set for **Required** deployments but not for **Available**.
 
 ```powershell
 Deployments = {
