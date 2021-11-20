@@ -15,7 +15,7 @@ Write-Host -Object 'Installing pre-reqs...'
 $Modules = @(
     @{
         Name = 'Pester'
-        MaximumVersion = '4.9'
+        RequiredVersion = '4.9.0'
     }
     @{
         Name = 'psake'
