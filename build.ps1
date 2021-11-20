@@ -50,7 +50,7 @@ foreach ($Module in $Modules) {
     }
     # Force the module to be reimported
     Remove-Module -Name $Module.Name -Force -ErrorAction SilentlyContinue
-    Import-Module -Name $Module.Name -Force
+    Import-Module @Module -Force
 }
 
 $Module = Resolve-Path -Path $PSScriptRoot\src\*.psd1
