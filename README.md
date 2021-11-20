@@ -4,7 +4,7 @@ PackageAutomation
 Description
 -----------
 
-Provides a [domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language) for packaging new versions of apps. The goal of this module is to make easy to read and write scripts that automatically download, package, and deploy new versions of software. This module is currently used for the [AutoPackaging](https://gitlab.contoso.com/Services/AutoPackaging) project on [GitLab](https://gitlab.contoso.com).
+Provides a [domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language) for packaging new versions of apps. The goal of this module is to make easy to read and write scripts that automatically download, package, and deploy new versions of software.
 
 Getting Started
 ---------------
