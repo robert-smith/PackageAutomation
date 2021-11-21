@@ -1,9 +1,12 @@
 $parent = Split-Path -Path $PSScriptRoot -Parent
 $module = Split-Path -Path $parent -Leaf
-$Resources = "$parent\src\Resources"
 Remove-Module $module -Force -ErrorAction SilentlyContinue
 Import-Module $parent\Src\$module.psd1 -Force
-Import-Module "$Resources\ConfigurationManager\ConfigurationManager.psd1" -Force -Scope Global -ErrorAction SilentlyContinue
+$CMDlls = Get-ChildItem -Path "$PSScriptRoot\ConfigurationManager\*.dll"
+foreach ($Dll in $CMDlls) {
+    [Reflection.Assembly]::LoadFile($Dll.FullName) | out-null
+}
+Import-Module "$PSScriptRoot\ConfigurationManager\ConfigurationManager.psd1" -Force -Scope Global -ErrorAction SilentlyContinue
 
 Describe "$module - Publish-Application" {
     InModuleScope PackageAutomation {
